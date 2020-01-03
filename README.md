@@ -21,7 +21,7 @@ brew install sleepwatcher
 brew services start sleepwatcher
 ```
 
-You may be asked to change security preferenaces for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
+You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
 
 
 3. Press these keys to show hidden files on your computer.

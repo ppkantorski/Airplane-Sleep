@@ -48,7 +48,7 @@ CMD + fn + shift + .
 
 Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
 
-Sidenote:
+SIDENOTE:
 
 Hibernation is a super useful feature, especially with fast SSDs so it might also be worth changing the sleep standby delay before hibernation. These commands change the standbydelay when on low power to 10 minutes (600 sec) and when on high power to 20 minutes (1200 sec).
 
@@ -57,3 +57,6 @@ Hibernation is a super useful feature, especially with fast SSDs so it might als
 sudo pmset -a standbydelaylow 600
 sudo pmset -a standbydelayhigh 1200
 ```
+
+Disabling TurboBoost can also increase your battery but I doubt it will change anything with sleepmode.  Still, its worth checking out.
+https://github.com/rugarciap/Turbo-Boost-Switcher

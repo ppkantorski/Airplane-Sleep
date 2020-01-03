@@ -10,14 +10,17 @@ Hey so I wrote a few simple commands that might help with saving battery life.  
 
 1. Run this command on Terminal to install the Homebrew package manager.
 
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 2. Install these two command-line tools for controling bluetooth and executing sleep commands.
 
-    brew install blueutil
-    brew install sleepwatcher
-	brew services start sleepwatcher
+```bash
+brew install blueutil
+brew install sleepwatcher
+brew services start sleepwatcher
+```
 
 You may be asked to change security preferenaces for "input monitoring" on your MacBook to allow sleepwatcher to function properly
 

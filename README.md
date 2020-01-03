@@ -47,3 +47,13 @@ CMD + fn + shift + .
 ```
 
 Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
+
+Sidenote:
+
+It might also be worth changing the sleep standby delay before hibernation. These commands change the standbydelay when on low power to 10 minutes (600 sec) and when on high power to 20 minutes (1200 sec).  Hibernation is a super useful feature, especially with fast SSDs.
+
+
+```bash
+sudo pmset -a standbydelaylow 600
+sudo pmset -a standbydelayhigh 1200
+```

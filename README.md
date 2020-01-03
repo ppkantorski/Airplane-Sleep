@@ -58,5 +58,6 @@ sudo pmset -a standbydelaylow 600
 sudo pmset -a standbydelayhigh 1200
 ```
 
-Disabling TurboBoost can also increase your battery but I doubt it will change anything with sleepmode.  Still, its worth checking out.
+Disabling TurboBoost can also increase your battery but I doubt it will change anything with sleepmode.  Still, it's worth checking out.
+
 https://github.com/rugarciap/Turbo-Boost-Switcher

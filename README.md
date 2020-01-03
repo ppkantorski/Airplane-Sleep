@@ -49,7 +49,7 @@ Now when the computer sleeps, it will automatically disable wifi if it's on and 
 
 # Sidenote
 
-Hibernation is a super useful feature, especially with fast SSDs so it might also be worth changing the sleep standby delay before hibernation. These commands change the standbydelay when on low power to 10 minutes (600 sec) and when on high power to 20 minutes (1200 sec).
+Hibernation is a super useful feature, especially with fast SSDs.  It might also be worth changing the sleep standby delay before hibernation.  These commands change the delay after sleeping to entering hibernation when on low power to 10 minutes (600 sec) and when on high power to 20 minutes (1200 sec).
 
 
 ```bash

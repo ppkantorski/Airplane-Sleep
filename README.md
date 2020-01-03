@@ -1,4 +1,4 @@
-# Airplane-Sleep
+# Airplane-Sleep (macOS)
 Disable wifi and bluetooth when closing your MacBook or putting it to sleep!
 
 =================================================================================

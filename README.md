@@ -1,9 +1,9 @@
-# Airplane-Sleep (macOS)
+# Airplane-Sleep (macOS Catalina and Mojave)
 Disable wifi and bluetooth when closing your MacBook or putting it to sleep!
 
 =================================================================================
 
-Hey so I wrote a few simple commands that might help with saving battery life.  Apparently wifi and bluetooth are still active when the MBP is closed and if you have something like Dropbox running, it could contribute to significant power drain..  Turning the antennas off can save battery and prevent some data from being transferred during sleep mode.
+Here's a few simple commands that might help with saving battery life.  It should work on other versions of macOS and possibly linux.  So apparently wifi and bluetooth are still active when the MBP is closed and if you have something like Dropbox running, it could contribute to significant power drain..  Turning the antennas off can save battery and prevent some data from being transferred during sleep mode.
 
 =================================================================================
 

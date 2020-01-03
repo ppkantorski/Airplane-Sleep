@@ -1,12 +1,11 @@
 # Airplane-Sleep (macOS Catalina and Mojave)
 Disable wifi and bluetooth when closing your MacBook or putting it to sleep!
 
-=================================================================================
-
+# Features
 Here's a few simple commands that might help with saving battery life.  It should work on other versions of macOS and possibly linux.  So apparently wifi and bluetooth are still active when the MBP is closed and if you have something like Dropbox running, it could contribute to significant power drain..  Turning the antennas off can save battery and prevent some data from being transferred during sleep mode.
 
-=================================================================================
 
+# Installation
 
 1. Run this command on Terminal to install the Homebrew package manager.
 
@@ -48,7 +47,7 @@ CMD + fn + shift + .
 
 Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
 
-SIDENOTE:
+# Sidenote
 
 Hibernation is a super useful feature, especially with fast SSDs so it might also be worth changing the sleep standby delay before hibernation. These commands change the standbydelay when on low power to 10 minutes (600 sec) and when on high power to 20 minutes (1200 sec).
 

@@ -30,7 +30,12 @@ You may be asked to change security preferenaces for "input monitoring" on your 
     Press "CMD + fn + shift + ."
 
 
-4. Move the ".sleep" and ".wakeup" files in the .zip file to your user home directory and run these commands to change permissions
+4. Rename "sleep" to ".sleep" and "wakeup" to ".wakeup" them move the files into your user home directory.  Run these commands within the user home directory (~/) to change permissions for execution.
+
+```bash
+chmod +x .sleep
+chmod +x .wakeup
+```
 
 
 5. Now you can to hide hidden files.

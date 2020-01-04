@@ -1,7 +1,7 @@
 #!/bin/zsh
 clear
 echo "================================================================================"
-echo "                 Airplane-Sleep Uninstaller v1.0 by b0rd2dEAth"
+echo "              Airplane-Sleep Uninstaller v1.0 by Patrick Kantorski"
 echo "================================================================================"
 echo " This uninstaller script removes Airplane-Sleep with custom options for"
 echo " choosing what you want to remove."

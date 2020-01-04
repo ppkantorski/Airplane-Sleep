@@ -46,8 +46,14 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 		#/Volumes/Airplane-Sleep/
 		rm -rf ~/.sleep
 		echo " >" ~/.sleep is now removed.
-		rm -rf ~/.wakeup
 		sleep 1
+		rm -rf ~/.wakeup
+		echo " >" ~/.wakeup is now removed.
+		sleep 1
+		rm -rf ~/.bluestatus
+		echo " >" ~/.sleep is now removed.
+		sleep 1
+		rm -rf ~/.wifistatus
 		echo " >" ~/.wakeup is now removed.
 	fi
 	

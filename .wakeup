@@ -7,6 +7,6 @@ if [[ "$bluestatus" != "0" ]]; then
     blueutil -p 1
 fi
 
-if [[ "$wifistatus" != "68" ]]; then
+if [[ "$wifistatus" != "0" ]]; then
     networksetup -setairportpower airport on
 fi

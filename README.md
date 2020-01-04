@@ -6,7 +6,7 @@ Here's a few simple commands that might help with saving battery life.  It shoul
 
 # Installation
 
-1. Open Terminal and type in
+1. Mount Airplane-Sleep.dmg.  Open Terminal then type in
 
 ```bash
 chmod +x /Volumes/Airplane-Sleep/install.command

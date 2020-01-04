@@ -1,13 +1,15 @@
 #!/bin/zsh
 
-echo $(blueutil -p) > .bluestatus
-ping -c 1 google.com ;  echo $? > .wifistatus
-
+echo $(blueutil -p) > ~/.bluestatus
 bluestatus=$(head -n 1 ~/.bluestatus)
-wifistatus=$(head -n 1 ~/.wifistatus)
 
 if [[ "$bluestatus" != "0" ]]; then
     blueutil -p 0
 fi
 
-networksetup -setairportpower airport off
+if [[ $(networksetup -getairportpower en0) =~ "On" ]]; then
+	echo 1 > ~/.wifistatus
+	networksetup -setairportpower airport off
+else
+	echo 0 > ~/.wifistatus
+fi

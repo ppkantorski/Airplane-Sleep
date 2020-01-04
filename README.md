@@ -56,8 +56,8 @@ chmod +x /Volumes/Airplane-Sleep/uninstall.command
   cp /Volume/Airplain-Sleep/.sleep ~/
   cp /Volume/Airplain-Sleep/.wakeup ~/
   
-  echo 0 > ~/.bluestatus 
-  echo 0 > ~/.wifistatus
+  echo 1 > ~/.bluestatus 
+  echo 1 > ~/.wifistatus
   
   chmod +x ~/.sleep
   chmod +x ~/.wakeup

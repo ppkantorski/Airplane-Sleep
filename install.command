@@ -13,7 +13,7 @@ if [[ $(ps -o comm= $PPID) = iterm ]]; then
 	stty erase '^?'
 fi
 
-while [[ "$tmp" != "y" ] && [ "$tmp" != "Y" ] && [ "$tmp" != "n" ] && [ "$tmp" != "N" ]]; do
+while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 	unset tmp
 	vared -p "> Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
 	sleep 2

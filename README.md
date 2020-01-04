@@ -4,8 +4,34 @@ Disable wifi and bluetooth when closing your MacBook or putting it to sleep!
 # Features
 Here's a few simple commands that might help with saving battery life.  It should work on other versions of macOS and possibly linux.  So apparently wifi and bluetooth are still active when the MBP is closed and if you have something like Dropbox running, it could contribute to significant power drain.  Turning the antennas off can save battery and prevent some data from being transferred during sleep mode.
 
-
 # Installation
+
+1. Open Terminal and type in
+
+```bash
+chmod +x /Volumes/Airplane-Sleep/install.command
+```
+
+2. Double-click on the install.command file.
+
+3. Allow the installer to everything.  You may be asked to change security 
+preferences for "input monitoring" on your MacBook to allow sleepwatcher to 
+function properly.
+
+# Uninstallation
+
+1. Open Terminal and type in
+
+```bash
+chmod +x /Volumes/Airplane-Sleep/uninstall.command
+```
+
+2. Double-click on the uninstall.command file.
+
+3. Allow the uninstaller to remove what ever you want from what was installed.
+
+
+# Manual Installation
 
 1. Run command on Terminal to install the Homebrew package manager.
 
@@ -24,26 +50,21 @@ brew services start sleepwatcher
 You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
 
 
-3. Press these keys to show hidden files on your computer.
-
-```
-CMD + fn + shift + .
-```
-
-
-4. Rename "sleep" to ".sleep" and "wakeup" to ".wakeup" them move the files into your user home directory.  Run these commands within the user home directory (cd ~/) on Terminal to change permissions for execution.
+3. Move the hidden files ".sleep" and ".wakeup" from the .dmg file into your user home directory and initialize ".bluestatus" and ".wifistatus". Change permissions for each file.
 
 ```bash
-chmod +x .sleep
-chmod +x .wakeup
+cp /Volume/Airplain-Sleep/.sleep ~/
+cp /Volume/Airplain-Sleep/.wakeup ~/
+
+echo 0 > ~/.bluestatus 
+echo 0 > ~/.wifistatus
+
+chmod +x ~/.sleep
+chmod +x ~/.wakeup
+chmod +x ~/.bluestatus
+chmod +x ~/.wifistatus
 ```
 
-
-5. Now, if you want, you can press these keys again to hide hidden files.
-
-```
-CMD + fn + shift + . 
-```
 
 Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
 

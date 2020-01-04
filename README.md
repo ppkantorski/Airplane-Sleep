@@ -14,9 +14,7 @@ chmod +x /Volumes/Airplane-Sleep/install.command
 
 2. Double-click on the install.command file.
 
-3. Allow the installer to everything.  You may be asked to change security 
-preferences for "input monitoring" on your MacBook to allow sleepwatcher to 
-function properly.
+3. Allow the installer to everything.  You may be asked to change security preferences for "input monitoring" on your MacBook to allow the Homebrew package "sleepwatcher" to function properly.
 
 # Uninstallation
 

@@ -27,7 +27,6 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	echo "================================================================================"
 	echo " > Checking for Homebrew"
 	echo "================================================================================"; sleep 1
-	echo
 	
 	[ ! -f "`which brew`" ] && echo "> Homebrew is not installed."
 	[ ! -f "`which brew`" ] && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -35,6 +34,9 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	
 	[ ! -f "`which brew`" ] && echo "> Homebrew is still not installed! "
 	[ ! -f "`which brew`" ] && echo ">  Please manually install Homebrew. Exiting..." && sleep 3 && exit
+	
+	echo
+	echo $(which brew)
 	
 	echo; sleep 2
 	echo "================================================================================"
@@ -84,6 +86,5 @@ unset tmp
 
 echo; sleep 1
 echo "> Now exiting installer..."
-echo "================================================================================"
 sleep 1
 exit

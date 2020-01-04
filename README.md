@@ -32,8 +32,10 @@ chmod +x /Volumes/Airplane-Sleep/uninstall.command
 
 
 # Manual Installation
+
 <details>
   <summary>Click to expand!</summary>
+  
   1. Run command on Terminal to install the Homebrew package manager.
   
   ```bash

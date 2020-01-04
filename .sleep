@@ -3,11 +3,10 @@
 echo $(blueutil -p) > .bluestatus
 ping -c 1 google.com ;  echo $? > .wifistatus
 
-bluestatus=$(head -n 1 .bluestatus)
-wifistatus=$(head -n 1 .wifistatus)
+bluestatus=$(head -n 1 ~/.bluestatus)
+wifistatus=$(head -n 1 ~/.wifistatus)
 
-if [[ "$bluestatus" != "0" ]]
-then
+if [[ "$bluestatus" != "0" ]]; then
     blueutil -p 0
 fi
 

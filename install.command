@@ -22,7 +22,7 @@ while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 	fi
 done
 
-if [[ "$tmp" == "y" ] || [ "$tmp" == "Y" ]]; then
+if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	unset tmp
 	echo "================================================================================"
 	echo " > Checking for Homebrew"

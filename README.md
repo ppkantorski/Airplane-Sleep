@@ -48,7 +48,7 @@ brew services start sleepwatcher
 You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
 
 
-3. Move the hidden files ".sleep" and ".wakeup" from the .dmg file into your user home directory and initialize ".bluestatus" and ".wifistatus". Change permissions for each file.
+3. Move the hidden files ".sleep" and ".wakeup" from the .dmg into your user home directory. Change permissions for each file.
 
 ```bash
 cp /Volume/Airplain-Sleep/.sleep ~/

@@ -32,60 +32,65 @@ chmod +x /Volumes/Airplane-Sleep/uninstall.command
 
 
 # Manual Installation
-
-1. Run command on Terminal to install the Homebrew package manager.
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-2. Install command-line tools for controling bluetooth and executing sleep commands.  You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
-
-```bash
-brew install blueutil
-brew install sleepwatcher
-brew services start sleepwatcher
-```
-
-3. Move the hidden files ".sleep" and ".wakeup" from the .dmg into your user home directory.  Initialize file for ".bluestatus" and ".wifistatus".  Change permissions for each file.
-
-```bash
-cp /Volume/Airplain-Sleep/.sleep ~/
-cp /Volume/Airplain-Sleep/.wakeup ~/
-
-echo 0 > ~/.bluestatus 
-echo 0 > ~/.wifistatus
-
-chmod +x ~/.sleep
-chmod +x ~/.wakeup
-chmod +x ~/.bluestatus
-chmod +x ~/.wifistatus
-```
+<details>
+  <summary>Click to expand!</summary>
+  1. Run command on Terminal to install the Homebrew package manager.
+  
+  ```bash
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+  
+  2. Install command-line tools for controling bluetooth and executing sleep commands.  You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
+  
+  ```bash
+  brew install blueutil
+  brew install sleepwatcher
+  brew services start sleepwatcher
+  ```
+  
+  3. Move the hidden files ".sleep" and ".wakeup" from the .dmg into your user home directory.  Initialize file for ".bluestatus" and ".wifistatus".  Change permissions for each file.
+  
+  ```bash
+  cp /Volume/Airplain-Sleep/.sleep ~/
+  cp /Volume/Airplain-Sleep/.wakeup ~/
+  
+  echo 0 > ~/.bluestatus 
+  echo 0 > ~/.wifistatus
+  
+  chmod +x ~/.sleep
+  chmod +x ~/.wakeup
+  chmod +x ~/.bluestatus
+  chmod +x ~/.wifistatus
+  ```
+</details>
 
 # Manual Uninstallation
-
-1. Uninstallation of configuration files.
-
-```bash
-rm -rf ~/.sleep
-rm -rf ~/.wakeup
-rm -rf ~/.bluestatus
-rm -rf ~/.wifistatus
-```
-
-2. Uninstallation of Homebrew packages.
-
-```bash
-brew remove blueutil
-brew services stop sleepwatcher
-brew remove sleepwatcher
-```
-
-3. Uninstallation of Homebrew (optional).
-
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-```
+<details>
+  <summary>Click to expand!</summary>
+  
+  1. Uninstallation of configuration files.
+  
+  ```bash
+  rm -rf ~/.sleep
+  rm -rf ~/.wakeup
+  rm -rf ~/.bluestatus
+  rm -rf ~/.wifistatus
+  ```
+  
+  2. Uninstallation of Homebrew packages.
+  
+  ```bash
+  brew remove blueutil
+  brew services stop sleepwatcher
+  brew remove sleepwatcher
+  ```
+  
+  3. Uninstallation of Homebrew (optional).
+  
+  ```bash
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+  ```
+  </details>
 
 # Sidenote
 

@@ -15,7 +15,7 @@ fi
 
 while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 	unset tmp
-	vared -p "> Please enter 'y' for 'yes' or 'n' for 'no'. (y|n): " -c tmp
+	vared -p " > Please enter 'y' for 'yes' or 'n' for 'no'. (y|n): " -c tmp
 	sleep 2
 	if [[ $(ps -o comm= $PPID) = iterm ]]; then
 		stty erase '^?'
@@ -30,11 +30,10 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	if [[ $(ps -o comm= $PPID) = iterm ]]; then
 		stty erase '^?'
 	fi
-	#echo "================================================================================"; sleep 1
 	
 	while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 		unset tmp
-		vared -p "> Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
+		vared -p " > Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
 		sleep 2
 		if [[ $(ps -o comm= $PPID) = iterm ]]; then
 			stty erase '^?'
@@ -43,9 +42,7 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	
 	if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 		unset tmp
-		echo "================================================================================"
-		echo " > Removing configuration files."
-		echo "================================================================================"; sleep 1
+		echo " > Removing configuration files..."
 		#/Volumes/Airplane-Sleep/
 		rm -rf ~/.sleep
 		echo " >" ~/.sleep is now removed.
@@ -64,11 +61,10 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	if [[ $(ps -o comm= $PPID) = iterm ]]; then
 		stty erase '^?'
 	fi
-	#echo "================================================================================"; sleep 1
 	
 	while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 		unset tmp
-		vared -p "> Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
+		vared -p " > Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
 		sleep 2
 		if [[ $(ps -o comm= $PPID) = iterm ]]; then
 			stty erase '^?'
@@ -77,14 +73,11 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	
 	if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 		unset tmp
-		echo "================================================================================"
 		echo " > Removing Homebrew packages.."
-		echo "================================================================================"; sleep 1
 		brew remove blueutil
 		brew services stop sleepwatcher
 		brew remove sleepwatcher
-		echo "================================================================================"
-		echo "> Homebrew packages have been removed!"
+		echo " > Homebrew packages have been removed!"
 		sleep 2
 	fi
 
@@ -103,7 +96,7 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	
 	while [[ "$tmp" != "y" && "$tmp" != "Y" && "$tmp" != "n" && "$tmp" != "N" ]]; do
 		unset tmp
-		vared -p "> Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
+		vared -p " > Please enter 'y' for yes or 'n' for no. (y|n): " -c tmp
 		sleep 2
 		if [[ $(ps -o comm= $PPID) = iterm ]]; then
 			stty erase '^?'

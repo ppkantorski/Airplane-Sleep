@@ -49,14 +49,23 @@ if [[ "$tmp" == "y" ] || [ "$tmp" == "Y" ]]; then
 	echo " > Installing configuration files"
 	echo "================================================================================"; sleep 1
 	echo
-	cp $(dirname "$0")/.sleep ~/; chmod +x ~/.sleep
+	cp $(dirname "$0")/.sleep ~/
 	echo ">" sleep config stored to ~/.sleep
 	sleep 1
-	cp $(dirname "$0")/.wakeup ~/; chmod +x ~/.wakeup
+	chmod +x ~/.sleep; echo "> .sleep is now executable! "
+	sleep 1
+	cp $(dirname "$0")/.wakeup ~/
 	echo ">" wakeup config stored to ~/.wakeup
 	
+	chmod +x ~/.wakeup; echo "> .wakeup is now executable! "
+	sleep 1
+
+	
+	echo "> Generating initial .bluestatus and .wifistatus config files... "
+	sleep 1
 	echo $(blueutil -p) > ~/.bluestatus; chmod +x ~/.bluestatus
 	ping -c 1 google.com ;  echo $? > ~/.wifistatus; chmod +x ~/.wifistatus
+	echo "> .bluestatus and .wifistatus are now in home directory! "
 	
 	echo; sleep 2
 	echo "================================================================================"

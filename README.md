@@ -39,16 +39,13 @@ chmod +x /Volumes/Airplane-Sleep/uninstall.command
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-2. Install command-line tools for controling bluetooth and executing sleep commands.
+2. Install command-line tools for controling bluetooth and executing sleep commands.  You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
 
 ```bash
 brew install blueutil
 brew install sleepwatcher
 brew services start sleepwatcher
 ```
-
-You may be asked to change security preferences for "input monitoring" on your MacBook to allow sleepwatcher to function properly.
-
 
 3. Move the hidden files ".sleep" and ".wakeup" from the .dmg into your user home directory.  Initialize file for ".bluestatus" and ".wifistatus".  Change permissions for each file.
 

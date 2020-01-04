@@ -16,6 +16,8 @@ chmod +x /Volumes/Airplane-Sleep/install.command
 
 3. Allow the installer to everything.  You may be asked to change security preferences for "input monitoring" on your MacBook to allow the Homebrew package "sleepwatcher" to function properly.
 
+Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
+
 # Uninstallation
 
 1. Open Terminal and type in
@@ -63,8 +65,30 @@ chmod +x ~/.bluestatus
 chmod +x ~/.wifistatus
 ```
 
+# Manual Uninstallation
 
-Now when the computer sleeps, it will automatically disable wifi if it's on and bluetooth if it's on as well.  If one of them are already turned off, it will remain off when sleep is disengaged.
+1. Uninstallation of configuration files.
+
+```bash
+rm -rf ~/.sleep
+rm -rf ~/.wakeup
+rm -rf ~/.bluestatus
+rm -rf ~/.wifistatus
+```
+
+2. Uninstallation of Homebrew packages.
+
+```bash
+brew remove blueutil
+brew services stop sleepwatcher
+brew remove sleepwatcher
+```
+
+3. Uninstallation of Homebrew (optional).
+
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+```
 
 # Sidenote
 

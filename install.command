@@ -24,6 +24,7 @@ done
 
 if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	unset tmp
+	echo
 	echo "================================================================================"
 	echo " > Checking for Homebrew"
 	echo "================================================================================"; sleep 1
@@ -65,8 +66,17 @@ if [[ "$tmp" == "y" || "$tmp" == "Y" ]]; then
 	
 	echo "> Generating initial .bluestatus and .wifistatus config files... "
 	sleep 1
-	echo $(blueutil -p) > ~/.bluestatus; chmod +x ~/.bluestatus
-	ping -c 1 google.com ;  echo $? > ~/.wifistatus; chmod +x ~/.wifistatus
+	echo $(blueutil -p) > ~/.bluestatus
+	chmod +x ~/.bluestatus
+
+	if [[ $(networksetup -getairportpower en0) =~ "On" ]]; then
+		echo 1 > ~/.wifistatus
+		networksetup -setairportpower airport off
+	else
+		echo 0 > ~/.wifistatus
+	fi
+    chmod +x ~/.wifistatus
+	
 	echo "> .bluestatus and .wifistatus are now in home directory! "
 	
 	echo; sleep 2

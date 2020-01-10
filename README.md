@@ -53,8 +53,8 @@ chmod +x /Volumes/Airplane-Sleep/uninstall.command
   3. Move the hidden files ".sleep" and ".wakeup" from the .dmg into your user home directory.  Initialize file for ".bluestatus" and ".wifistatus".  Change permissions for each file.
   
   ```bash
-  cp /Volume/Airplain-Sleep/.sleep ~/
-  cp /Volume/Airplain-Sleep/.wakeup ~/
+  cp /Volume/Airplane-Sleep/.sleep ~/
+  cp /Volume/Airplane-Sleep/.wakeup ~/
   
   echo 1 > ~/.bluestatus 
   echo 1 > ~/.wifistatus

@@ -1,7 +1,7 @@
 #!/bin/zsh
 clear
 echo "================================================================================"
-echo "              Airplane-Sleep Installer v1.0 by Patrick Kantorski"
+echo "              Airplane-Sleep Installer v1.0 by ppkantorski"
 echo "================================================================================"
 echo " This installer only installs trusted Homebrew packages along with the custom "
 echo " configuration files for toggling bluetooth and wifi during sleep-mode."

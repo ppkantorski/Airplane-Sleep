@@ -13,3 +13,10 @@ if [[ $(networksetup -getairportpower en0) =~ "On" ]]; then
 else
 	echo 0 > ~/.wifistatus
 fi
+
+services=$(networksetup -listallnetworkservices | sed '1d' | grep -v "Wi-Fi")
+while IFS= read -r service; do
+    if [[ $service != \** ]]; then
+        networksetup -setnetworkserviceenabled "$service" off
+    fi
+done <<< "$services"%

@@ -3,11 +3,11 @@
 bluestatus=$(head -n 1 ~/.bluestatus)
 wifistatus=$(head -n 1 ~/.wifistatus)
 
-if [[ "$bluestatus" != "0" ]]; then
+if [[ "$bluestatus" != "1" ]]; then
     blueutil -p 1
 fi
 
-if [[ "$wifistatus" != "0" ]]; then
+if [[ "$wifistatus" != "1" ]]; then
     networksetup -setairportpower airport on
 fi
 
